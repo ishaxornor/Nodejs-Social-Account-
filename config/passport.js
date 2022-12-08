@@ -6,11 +6,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const FacebookStrategy = require("passport-facebook").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-//
-//
+
 //  PASSPORT CONFIG
-//
-//
+
 module.exports = function (passport) {
   passport.serializeUser(function (user, done) {
     done(null, user);

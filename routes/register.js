@@ -42,6 +42,7 @@ module.exports = {
       let email = req.body.email;
       let password = req.body.password;
       //
+      
       const hash = await bcrypt.hash(password, 10);
       const user = await User.create({
         name: name,
@@ -49,7 +50,8 @@ module.exports = {
         registration_type: "email",
         password: hash,
       });
-      console.log("created user is " + user.name);           
+      console.log("created user is " + user.name);         
+        
       passport.authenticate("local", function (err, user, info) {
         if (err) {
           return next(err);
