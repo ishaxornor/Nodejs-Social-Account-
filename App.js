@@ -56,8 +56,8 @@ app.post('/register', submitRegister);
 
 app.get('/auth/facebook', getFacebookLogin);
 app.get('/auth/facebook/callback', handleFacebookLogin);
-app.get('/auth/google', getGoogleLogin);
-app.get('/auth/google/callback', handleGoogleLogin);
+app.get('/googleauth/google', getGoogleLogin);
+app.get('/googleauth/google/callback', handleGoogleLogin);
 
 app.listen(process.env.PORT, () => {
     console.log(`server running on port: ${process.env.PORT}`);
